@@ -11,6 +11,7 @@ interface ButtonProps {
   size?: ButtonSizeProps;
   disabled?: boolean;
 }
+console.log("aaaa")
 
 export function Button({
   label,
