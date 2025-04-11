@@ -21,7 +21,7 @@ interface ButtonStylesProps {
 
 export const ButtonStyles = styled.button<ButtonStylesProps>`
   background-color: ${(props) =>
-    props.theme.colors?.[props.color ?? "primary"]};
+    props.theme.defaultColors?.[props.color ?? "primary"]};
 
   ${(props) => props.theme.sizes?.[props.size ?? "medium"]};
   color: white;

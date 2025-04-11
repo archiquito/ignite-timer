@@ -1,53 +1,31 @@
-import { DefaultTheme } from "styled-components";
-import { 
-  ButtonSizeProps,
-} from "../../components/Button.styles";
+// This file contains the default theme configuration for the application.
+// It defines the colors, fonts, sizes, and other styles used throughout the app.
+export const defaultTheme = {
+  white: "#FFF",
+  "gray-100": "#E1E1E6",
+  "gray-300": "#C4C4CC",
+  "gray-400": "#8D8D99",
+  "gray-500": "#7C7C8A",
+  "gray-600": "#323238",
+  "gray-700": "#29292E",
+  "gray-800": "#202024",
+  "gray-900": "#121214",
 
-declare module "styled-components" {
-  export interface DefaultTheme {
-    colors: {
-      primary: string;
-      secondary: string;
-      danger: string;
-      success: string;
-      warning: string;
-      info: string;
-    };
-    sizes: {
-      [key in ButtonSizeProps]: { padding: string; fontSize: string };
-    };
-    borderRadius: string;
-    boxShadow: string;
-    transition: string;
-    fonts: {
-      fontFamily: string;
-      fontSize: string;
-      fontWeight: string;
-    };
-    disabled: {
-      backgroundColor: string;
-      cursor: string;
-    };
-    hover: {
-      opacity: string;
-      boxShadow: string;
-    };
-  }
-}
+  "green-300": "#00B37E",
+  "green-500": "#00875F",
+  "green-700": "#015F43",
 
-export const defaultTheme: DefaultTheme = {
-  colors: {
-    primary: "#007bff",
-    secondary: "#6c757d",
-    danger: "#dc3545",
-    success: "#28a745",
-    warning: "#ffc107",
+  "red-500": "#AB222E",
+  "red-700": "#7A1921",
+
+  "yellow-500": "#FBA94C",
+  defaultColors: {
+    primary: "#00875F",
+    secondary: "#00B37E",
+    danger: "#7A1921",
+    success: "#015F43",
+    warning: "#FBA94C",
     info: "#17a2b8",
-  },
-  fonts: {
-    fontFamily: "Arial, sans-serif",
-    fontSize: "16px",
-    fontWeight: "400",
   },
   sizes: {
     small: { padding: "5px 10px", fontSize: "12px" },
