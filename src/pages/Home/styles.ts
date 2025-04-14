@@ -15,10 +15,8 @@ export const HomeContainer = styled.main`
   gap: 2rem;
 `;
 
-export const BtnCountDown = styled.button`
-  background: ${(props) => props.theme["green-500"]};
-  color: ${(props) => props.theme["gray-100"]};
-  padding: 1rem;
+const BaseBtnCountDown = styled.button`
+padding: 1rem;
   border-radius: 8px;
   border: none;
   cursor: pointer;
@@ -28,6 +26,25 @@ export const BtnCountDown = styled.button`
   justify-content: center;
   gap: 0.5rem;
   width: 100%;
+`;
+
+export const BtnCountDown = styled(BaseBtnCountDown)`   
+  background: ${(props) => props.theme["green-500"]};
+  color: ${(props) => props.theme["gray-100"]};
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+  &:not(:disabled):hover {
+    background: ${(props) => props.theme["green-700"]};
+  }
+`;
+
+export const BtnStopCountDown = styled(BaseBtnCountDown)`   
+  background: ${(props) => props.theme["red-500"]};
+  color: ${(props) => props.theme["gray-100"]};
+
   &:disabled {
     opacity: 0.7;
     cursor: not-allowed;
@@ -44,14 +61,6 @@ export const FormContainer = styled.div`
   width: 100%;
   margin: 0 auto;
   font-size: 1rem;
-  /* & input {
-    padding: 0.5rem;
-    border-radius: 8px;
-    border: none;
-    background: ${(props) => props.theme["gray-800"]};
-    color: ${(props) => props.theme["gray-100"]};
-    
-  } */
 `;
 
 const BaseInput = styled.input`
