@@ -5,7 +5,7 @@ import { z } from "zod";
 import { Play, Stop } from "phosphor-react";
 import { HomeContainer, BtnCountDown, BtnStopCountDown } from "./styles";
 import { FormInputs } from "./FormInputs/FormInputs";
-import { CountDown } from "./Countdown/Countdown";
+import { CountDown } from "./CountDown/CountDown";
 import { CyclesContext } from "./Context";
 
 const formValidationSchema = z.object({
@@ -30,7 +30,6 @@ export function Home() {
   const [cycles, setCycles] = useState<CyclesProps[]>([]);
   const [activeCycleId, setActiveCycleId] = useState<string | null>(null);
   const [amountSecondsPassed, setAmountSecondsPassed] = useState(0);
-  //const [activeCycleData, setActiveCycleData] = useState<CyclesProps | undefined>(undefined);
 
   const newCycleForm = useForm<formValidationSchemaData>({
     resolver: zodResolver(formValidationSchema),
