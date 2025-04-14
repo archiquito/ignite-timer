@@ -43,7 +43,6 @@ export function Home() {
   const { handleSubmit, reset } = newCycleForm;
 
   const onSubmit: SubmitHandler<formValidationSchemaData> = (data) => {
-    console.log(data);
     const newCycle: CyclesProps = {
       id: String(new Date().getTime()),
       task: data.task,
