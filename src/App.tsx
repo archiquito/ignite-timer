@@ -1,5 +1,7 @@
+
+import { BrowserRouter } from "react-router-dom";
+import { AppRouter } from "./AppRouter";
 import { ThemeProvider } from "styled-components";
-import { Button } from "./components/Button";
 import { defaultTheme } from "./styles/themes/default";
 import { GlobalStyle } from "./styles/globals";
 
@@ -8,9 +10,9 @@ export function App() {
     <>
       <ThemeProvider theme={defaultTheme}>
         <GlobalStyle />
-        <Button label="Clique aqui" size="large" disabled={true} />
-        <Button label="Clique aqui" color="danger" />
-        <Button label="Clique aqui" color="info" />
+        <BrowserRouter>
+         <AppRouter />
+        </BrowserRouter>
       </ThemeProvider>
     </>
   );
